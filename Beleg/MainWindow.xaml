@@ -1,0 +1,17 @@
+﻿<Window x:Name="Hauptmenue" x:Class="Beleg.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Beleg"
+        mc:Ignorable="d"
+        Title="Körper- und Formenrechner" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="lblMenu" Content="Hauptmenü" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial Black"/>
+        <Button x:Name="btnAnleitung" Content="Anleitung" HorizontalAlignment="Left" Margin="310,251,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" Click="btnAnleitung_Click" Height="35" Width="175" Cursor="Hand"/>
+        <Button x:Name="btnZurBerechnung" Content="Zur Berechnung" HorizontalAlignment="Left" Margin="310,142,0,0" VerticalAlignment="Top" Width="175" FontFamily="Arial" FontSize="16" Click="btnZurBerechnung_Click" Height="35" Cursor="Hand"/>
+        <ComboBox x:Name="cbxAuswahl" HorizontalAlignment="Left" Margin="310,102,0,0" VerticalAlignment="Top" Width="175" Height="35" FontFamily="Arial" FontSize="16" Cursor="Hand" TabIndex="2147483646" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsDropDownOpen="False"/>
+        <Button x:Name="btnExit" Content="Beenden" HorizontalAlignment="Left" Margin="310,306,0,0" VerticalAlignment="Top" Width="175" Height="35" FontFamily="Arial" FontSize="16" Click="btnExit_Click"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,45 @@
+﻿<Window x:Class="Beleg.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Beleg"
+        mc:Ignorable="d"
+        Title="Körper- und Formenrechner" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="793*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="cbxItemName" Content="Label" HorizontalAlignment="Left" Margin="304,10,0,0" VerticalAlignment="Top" Grid.Column="1" Height="35" Width="176" FontFamily="Arial Black" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button x:Name="btnZurueck" Content="Zurück zum Hauptmenü" Grid.Column="1" HorizontalAlignment="Left" Margin="578,366,0,0" VerticalAlignment="Top" Click="btnZurueck_Click" Width="175" Height="35" FontFamily="Arial" FontSize="16"/>
+        <TextBox x:Name="tbLaenge" Grid.Column="1" HorizontalAlignment="Left" Margin="47,91,0,0" Text="Länge" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Height="35" FontFamily="Arial" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsEnabled="False"/>
+        <TextBox x:Name="tbBreite" Grid.Column="1" HorizontalAlignment="Left" Margin="47,134,0,0" Text="Breite" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Height="34" FontFamily="Arial" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsEnabled="False"/>
+        <TextBox x:Name="tbDiagonale" Grid.Column="1" HorizontalAlignment="Left" Margin="47,182,0,0" Text="Diagonale" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" FontFamily="Arial" FontSize="16" Height="35" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsEnabled="False"/>
+        <TextBox x:Name="tbFlaeche" Grid.Column="1" HorizontalAlignment="Left" Margin="578,91,0,0" Text="Fläche" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Height="35" FontFamily="Arial" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsEnabled="False"/>
+        <TextBox x:Name="tbUmfang" Grid.Column="1" HorizontalAlignment="Left" Margin="578,133,0,0" Text="Umfang" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" FontFamily="Arial" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="35" IsEnabled="False"/>
+        <TextBox x:Name="tbHoehe" Grid.Column="1" HorizontalAlignment="Left" Margin="47,222,0,0" Text="Höhe" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Height="35" FontFamily="Arial" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsEnabled="False"/>
+        <TextBox x:Name="tbKathete" Grid.Column="1" HorizontalAlignment="Left" Margin="305,91,0,0" Text="Kathete (a)" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="35" FontFamily="Arial" FontSize="16" IsEnabled="False"/>
+        <TextBox x:Name="tbAnkathete" Grid.Column="1" HorizontalAlignment="Left" Margin="305,134,0,0" Text="Ankathete (b)" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Height="35" FontFamily="Arial" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsEnabled="False"/>
+        <TextBox x:Name="tbHypotenuse" Grid.Column="1" HorizontalAlignment="Left" Margin="305,182,0,0" Text="Hypotenuse (c)" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="35" FontFamily="Arial" FontSize="16" IsEnabled="False"/>
+        <TextBox x:Name="tbRadius" Grid.Column="1" HorizontalAlignment="Left" Margin="306,222,0,0" Text="Radius" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Height="35" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Arial" FontSize="16" IsEnabled="False"/>
+        <TextBox x:Name="tbDurchmesser" Grid.Column="1" HorizontalAlignment="Left" Margin="305,262,0,0" Text="Durchmesser" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" FontFamily="Arial" FontSize="16" Height="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" IsEnabled="False"/>
+        <TextBox x:Name="tbOberflaeche" Grid.Column="1" HorizontalAlignment="Left" Margin="578,182,0,0" Text="Oberfläche" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Height="35" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Arial" FontSize="16" IsEnabled="False"/>
+        <TextBox x:Name="tbVolumen" Grid.Column="1" HorizontalAlignment="Left" Margin="578,223,0,0" Text="Volumen" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" FontFamily="Arial" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="34" IsEnabled="False"/>
+        <Button x:Name="btnXML" Content="Export in XML" Grid.Column="1" HorizontalAlignment="Left" Margin="47,366,0,0" VerticalAlignment="Top" Width="175" Height="35" FontFamily="Arial" FontSize="16" Click="btnXML_Click"/>
+        <TextBlock x:Name="txtInfo" Grid.Column="1" HorizontalAlignment="Center" Margin="0,45,0,0" Text="Bitte geben Sie nun die Werte für die Berechnungen ein. Die Maße sollten einheitlich in cm oder m sein." TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" FontSize="16" Width="752"/>
+        <Button x:Name="btnBerechne" Content="Berechne" Grid.Column="1" HorizontalAlignment="Left" Margin="303,365,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="35" Width="175" Click="btnBerechne_Click" FontFamily="Arial" FontSize="16">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.024"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <TextBox x:Name="tbBreite2" Grid.Column="1" HorizontalAlignment="Left" Margin="578,263,0,0" Text="Breite 2" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Height="35" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Arial" FontSize="16" IsEnabled="False"/>
+        <TextBox x:Name="tbLaenge2" Grid.Column="1" HorizontalAlignment="Left" Margin="47,263,0,0" Text="Länge 2" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="35" FontFamily="Arial" FontSize="16" IsEnabled="False"/>
+
+    </Grid>
+</Window>
